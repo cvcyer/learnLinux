@@ -319,3 +319,68 @@ sudo iptables -I INPUT -j ACCEPT -s 192.168.3.0/24 -p tcp --dport 22
 
 #### Apache服务器部署静态网站
 
+>web服务程序：  IIS 只能在win中使用 Nginx  Apache （Tomcat可以视为Apache的扩展程序）
+
+
+
+#### VsFtp服务传输文件
+
+> ftp: 需要服务端和客户端 
+>
+> `ftp`协议占用两个端口  `20`数据传输端口 `21`命令控制端口
+>
+> 服务端可分为主动模式和被动模式
+
+
+
+`sudo apt-get install vsftpd` 安装
+
+`ftp  192.168.10.10` 登入服务
+
+
+
+>PAM  可插拔认证模块
+
+>nfs 文件网络共享系统    仅支持linux之间
+>
+>SMB 局域网内资源共享服务协议
+
+> Samba服务程序是基于SMB协议的的文件共享软件  支持linux与win之间
+
+`grep -v` 去除带符号的一行
+
+
+
+
+
+#### 使用Bind提供域名解析
+
+>DNS 域名解析服务     解析域名与ip地址对应关系 正向解析，反向解析
+
+>DNS服务器：  主服务器，从服务器，缓存服务器   
+>
+>分为递归查询(客户机向服务器查询) 、 迭代查询(DNS服务器向其他DNS服务器查询)
+
+>bind    伯克利互联网域名解析服务
+
+
+
+
+
+#### DHCP 动态管理主机协议
+
+
+
+#### MariaDB 数据库  
+
+>mysql已经逐渐转为封闭。所以使用MariaDB数据库
+
+
+
+>PXE+Kickstart部署无人值守安装
+
+PXE+HDCP+TFTP+VSftpd+Kickstart
+
+
+
+>部署LNMP
